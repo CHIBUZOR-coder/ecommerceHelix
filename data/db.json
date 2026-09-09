@@ -1,0 +1,484 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Running Sneaker 1",
+            "price": 32000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 2,
+            "name": "Casual Sneaker 2",
+            "price": 41000,
+            "new_hit": true,
+            "quantity": 0,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 3,
+            "name": "Sport Sneaker 3",
+            "price": 18000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 4,
+            "name": "Air Sneaker 4",
+            "price": 27000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 5,
+            "name": "Classic Sneaker 5",
+            "price": 35000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 6,
+            "name": "Street Sneaker 6",
+            "price": 16000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 7,
+            "name": "Pro Sneaker 7",
+            "price": 45000,
+            "new_hit": true,
+            "quantity": 0,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "XL"
+        },
+        {
+            "id": 8,
+            "name": "Lite Sneaker 8",
+            "price": 30000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 9,
+            "name": "Flex Sneaker 9",
+            "price": 14000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 10,
+            "name": "Zoom Sneaker 10",
+            "price": 38000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 11,
+            "name": "Boost Sneaker 11",
+            "price": 42000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 12,
+            "name": "Play Sneaker 12",
+            "price": 17000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 13,
+            "name": "Urban Sneaker 13",
+            "price": 29000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 14,
+            "name": "Edge Sneaker 14",
+            "price": 36000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1554137734-2d7f7f4f5e17?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 15,
+            "name": "Jump Sneaker 15",
+            "price": 15000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 16,
+            "name": "Max Sneaker 16",
+            "price": 47000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "XL"
+        },
+        {
+            "id": 17,
+            "name": "Nova Sneaker 17",
+            "price": 33000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1556048219-bb6978360b84?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 18,
+            "name": "Run Sneaker 18",
+            "price": 19000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 19,
+            "name": "Track Sneaker 19",
+            "price": 31000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 20,
+            "name": "Glow Sneaker 20",
+            "price": 39000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1512374382149-233c42b6b83b?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 21,
+            "name": "Mini Sneaker 21",
+            "price": 16000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 22,
+            "name": "Elite Sneaker 22",
+            "price": 44000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "XL"
+        },
+        {
+            "id": 23,
+            "name": "Chic Sneaker 23",
+            "price": 37000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 24,
+            "name": "Fun Sneaker 24",
+            "price": 18000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 25,
+            "name": "Prime Sneaker 25",
+            "price": 50000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "XL"
+        },
+        {
+            "id": 26,
+            "name": "Soft Sneaker 26",
+            "price": 34000,
+            "quantity": 0,
+            "new_hit": false,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1605408499391-6368c628ef42?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 27,
+            "name": "Kiddo Sneaker 27",
+            "price": 15500,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        },
+        {
+            "id": 28,
+            "name": "Speed Sneaker 28",
+            "price": 42000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "men",
+            "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "L"
+        },
+        {
+            "id": 29,
+            "name": "Vibe Sneaker 29",
+            "price": 36000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "women",
+            "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "M"
+        },
+        {
+            "id": 30,
+            "name": "Tiny Sneaker 30",
+            "price": 17000,
+            "quantity": 0,
+            "new_hit": true,
+            "category": "kids",
+            "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&h=600&q=80",
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "defaultSize": "S"
+        }
+    ]
+}
