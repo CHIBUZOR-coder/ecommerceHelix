@@ -42,7 +42,7 @@ function Navbar() {
         {navs.map((item, i) => (
           <NavLink
             className={({ isActive }) =>
-              ` ${isActive ? "bg-white text-black" : ""}       text-white border-white rounded-3xl p-2 border-[2px] hover:bg-white hover:text-black transition ease-in-out duration-300`
+              ` ${isActive ? "bg-white text-black" : "text-white"}        border-white rounded-3xl p-2 border-[2px] hover:bg-white hover:text-black transition ease-in-out duration-300`
             }
             key={i}
             to={item.path}
