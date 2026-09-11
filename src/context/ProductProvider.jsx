@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductContext = createContext();
 
@@ -96,6 +97,7 @@ function ProductProvider({ children }) {
 
           setCartItems(updatedCart);
           localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+          toast.info("Existing item quantity has been added successfully!");
         } else {
           // add the new product
           updatedCart = [
@@ -103,6 +105,7 @@ function ProductProvider({ children }) {
             { ...pro, quantity: quantity, size: resolvedSize },
           ];
           console.log("updated:", updatedCart);
+          toast.success("Item added to cart successfully!");
           setCartItems(updatedCart);
           localStorage.setItem("cartItems", JSON.stringify(updatedCart));
         }
@@ -114,8 +117,77 @@ function ProductProvider({ children }) {
     }
   };
 
+  const UpdateCart = async (prod, quantity) => {
+    try {
+      if (!token) {
+        let updatedCart;
+        //Get the uses cart
+        const storedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-  
+        //Check if the product exist in users cart
+        const existingItem = storedCart?.find(
+          (item) => Number(item?.id) === Number(prod?.id),
+        );
+
+        if (existingItem) {
+          updatedCart = storedCart.map((item) =>
+            Number(item?.id) === Number(existingItem?.id)
+              ? {
+                  ...item,
+                  quantity: quantity,
+                }
+              : item,
+          );
+
+          console.log(updatedCart);
+          setCartItems(updatedCart);
+          localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+          toast.success("User cart updated successfully!");
+        } else {
+          console.log("Item does not exist in users cart!");
+          toast.error("Item does not exist in users cart!");
+        }
+      } else {
+        console.log("Authentifiesd user");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const DeleteCart = async (id) => {
+    try {
+      if (!token) {
+        let updatedCart;
+        //Get users cart
+        const storedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        //Check if product exist in users cart
+        const existingItem = storedCart?.find(
+          (item) => Number(item?.id) === Number(id),
+        );
+
+        if (existingItem) {
+          updatedCart = storedCart.filter(
+            (item) => Number(item?.id) !== Number(id),
+          );
+
+          if (updatedCart) {
+            setCartItems(updatedCart);
+            localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+            toast.success("Users cart deleted successfully!");
+          }
+        } else {
+          console.log("Item does not exist in users cart!");
+          toast.error("Item does not exist in users cart!");
+        }
+      } else {
+        console.log("Authentified user");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <ProductContext.Provider
@@ -127,6 +199,8 @@ function ProductProvider({ children }) {
         RemoveFromCart,
         UpdateCartQuantity,
         ClearCart,
+        UpdateCart,
+        DeleteCart,
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import Layout from "../shared/Layout";
 const SHIPPING_FEE = 2500;
 
 function Checkout() {
-  const { CartItems, RemoveFromCart, UpdateCartQuantity, ClearCart } =
+  const { CartItems, DeleteCart, UpdateCart, ClearCart } =
     useContext(ProductContext);
 
   const [form, setForm] = useState({
@@ -24,7 +24,7 @@ function Checkout() {
   const subtotal = useMemo(
     () =>
       CartItems?.reduce(
-        (acc, item) => acc + Number(item.price) * Number(item.quantity),
+        (acc, item) => acc + Number(item?.price) * Number(item?.quantity),
         0,
       ) || 0,
     [CartItems],
@@ -83,8 +83,7 @@ function Checkout() {
             </h1>
 
             <p className="text-gray-500 mt-3">
-              Thank you for your purchase. A confirmation email has been sent
-              to{" "}
+              Thank you for your purchase. A confirmation email has been sent to{" "}
               <span className="font-medium text-gray-900">{form.email}</span>.
             </p>
 
@@ -147,15 +146,15 @@ function Checkout() {
                 </h2>
 
                 <div className="space-y-5">
-                  {CartItems.map((item) => (
+                  {CartItems?.map((item) => (
                     <div
-                      key={item.id}
+                      key={item?.id}
                       className="flex gap-4 pb-5 border-b border-gray-100 last:border-b-0 last:pb-0"
                     >
                       <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-lg overflow-hidden bg-gray-100">
                         <img
-                          src={item.image}
-                          alt={item.name}
+                          src={item?.image}
+                          alt={item?.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -164,18 +163,18 @@ function Checkout() {
                         <div className="flex justify-between gap-3">
                           <div className="min-w-0">
                             <p className="font-medium text-gray-900 truncate">
-                              {item.name}
+                              {item?.name}
                             </p>
 
                             <p className="text-sm text-gray-500 mt-1">
-                              Size: {item.size || item.defaultSize}
+                              Size: {item?.size || item?.defaultSize}
                             </p>
                           </div>
 
                           <p className="font-semibold text-gray-900 whitespace-nowrap">
                             ₦
                             {(
-                              Number(item.price) * Number(item.quantity)
+                              Number(item?.price) * Number(item?.quantity)
                             ).toLocaleString()}
                           </p>
                         </div>
@@ -184,23 +183,30 @@ function Checkout() {
                           <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
                             <button
                               type="button"
-                              onClick={() =>
-                                UpdateCartQuantity(item.id, item.quantity - 1)
-                              }
-                              disabled={item.quantity <= 1}
+                              onClick={() => {
+                                if (item?.quantity < 1) {
+                                  console.log("Delete called ");
+
+                                  DeleteCart(item?.id);
+                                } else {
+                                  console.log("Update called ");
+                                  UpdateCart(item, item?.quantity - 1);
+                                }
+                              }}
+                              disabled={item?.quantity <= 1}
                               className="w-8 h-8 flex items-center justify-center text-lg hover:bg-gray-100 transition disabled:opacity-40 disabled:cursor-not-allowed"
                             >
                               −
                             </button>
 
                             <span className="w-8 text-center text-sm font-medium">
-                              {item.quantity}
+                              {item?.quantity}
                             </span>
 
                             <button
                               type="button"
                               onClick={() =>
-                                UpdateCartQuantity(item.id, item.quantity + 1)
+                                UpdateCart(item, item?.quantity + 1)
                               }
                               className="w-8 h-8 flex items-center justify-center text-lg hover:bg-gray-100 transition"
                             >
@@ -210,7 +216,7 @@ function Checkout() {
 
                           <button
                             type="button"
-                            onClick={() => RemoveFromCart(item.id)}
+                            onClick={() => DeleteCart(item?.id)}
                             className="text-sm text-red-500 hover:text-red-700 hover:underline transition"
                           >
                             Remove
@@ -338,9 +344,7 @@ function Checkout() {
                       }`}
                     />
                     {errors.city && (
-                      <p className="text-xs text-red-500 mt-1">
-                        {errors.city}
-                      </p>
+                      <p className="text-xs text-red-500 mt-1">{errors.city}</p>
                     )}
                   </div>
 
