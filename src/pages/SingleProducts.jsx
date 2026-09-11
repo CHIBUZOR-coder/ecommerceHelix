@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import Layout from "../shared/Layout";
 
 function SingleProducts() {
-  const { Product } = useContext(ProductContext);
+  const { Product, AddToCart } = useContext(ProductContext);
   const { id } = useParams();
 
   const [singleProduct, setSingleProduct] = useState({});
@@ -191,6 +191,7 @@ function SingleProducts() {
                 {/* ================= BUTTONS ================= */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                   <button
+                    onClick={() => AddToCart(singleProduct, quantity, selectedSize)}
                     className="
                     h-13 rounded-lg
                     bg-black text-white

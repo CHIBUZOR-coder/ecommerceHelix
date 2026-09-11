@@ -37,11 +37,31 @@ function ProductProvider({ children }) {
 
   useEffect(() => {
     let total = CartItems?.reduce((acc, curr) => acc + curr?.quantity, 0);
-    if (total) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setCartCount(total);
-    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCartCount(total || 0);
   }, [CartItems]);
+
+  const RemoveFromCart = (id) => {
+    const updatedCart = CartItems.filter(
+      (item) => Number(item?.id) !== Number(id),
+    );
+    setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+  };
+
+  const UpdateCartQuantity = (id, quantity) => {
+    if (quantity < 1) return;
+    const updatedCart = CartItems.map((item) =>
+      Number(item?.id) === Number(id) ? { ...item, quantity } : item,
+    );
+    setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+  };
+
+  const ClearCart = () => {
+    setCartItems([]);
+    localStorage.setItem("cartItems", JSON.stringify([]));
+  };
 
   const AddToCart = async (pro, quantity, size) => {
     let resolvedSize = size || pro?.defaultSize;
@@ -80,7 +100,7 @@ function ProductProvider({ children }) {
           // add the new product
           updatedCart = [
             ...storedCart,
-            { ...pro, quantity: pro?.quantity + quantity, size: resolvedSize },
+            { ...pro, quantity: quantity, size: resolvedSize },
           ];
           console.log("updated:", updatedCart);
           setCartItems(updatedCart);
@@ -98,7 +118,17 @@ function ProductProvider({ children }) {
   
 
   return (
-    <ProductContext.Provider value={{ Product, AddToCart, cartCount }}>
+    <ProductContext.Provider
+      value={{
+        Product,
+        AddToCart,
+        cartCount,
+        CartItems,
+        RemoveFromCart,
+        UpdateCartQuantity,
+        ClearCart,
+      }}
+    >
       {children}
     </ProductContext.Provider>
   );

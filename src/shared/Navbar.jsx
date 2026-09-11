@@ -56,11 +56,11 @@ function Navbar() {
         <span className="text-white">
           <BsPerson className="h-7 w-6" />
         </span>
-        <span className="text-white relative ">
+        <Link to="/checkout" className="text-white relative ">
           <CgShoppingCart className="h-7 w-6" />
 
-          <p className="absolute top-[-10px] right-[-5px]">{cartCount}</p>
-        </span>
+          <p className="absolute top-[-10px] right-[-5px]">{cartCount || 0}</p>
+        </Link>
       </div>
     </div>
   );
